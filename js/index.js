@@ -52,15 +52,48 @@
 // console.log(formatString(longString));
 // console.log(formatString(shortString));
 
-//?\\\\\\\\\\\\Завдання 5\\\\\\\\\\\\\\\
+//*\\\\\\\\\\\\Завдання 5\\\\\\\\\\\\\\\
 
-function checkForSpam(message) {
+// function checkForSpam(message) {
+//    const lowerCaseMessage = message.toLowerCase();
+//     if (lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale')) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// console.log(checkForSpam("This is a SALE offer.")); 
+// console.log(checkForSpam("Just a regular message.")); 
+// console.log(checkForSpam("Spam messages are not allowed.")); 
+// console.log(checkForSpam("Great deal available for you!")); 
 
 
-}
 //*\\\\\\\\\\\\Завдання 6\\\\\\\\\\\\\\\
 
+let input;
+const numbers = [];
+let total = 0;
 
+while (true) {
+    input = prompt('Введіть число:');
+    
+    if (input === null) {
+        break; 
+    }
+
+    if (isNaN(input) || input.trim() === '') {
+        alert('Було введено не число, попробуйте ще раз');
+    } else {
+        numbers.push(Number(input)); 
+    }
+}
+
+if (numbers.length > 0) {
+    for (let number of numbers) {
+        total += number; 
+    }
+    console.log(`Загальна сума чисел дорівнює ${total}`);
+}
 
 
 
